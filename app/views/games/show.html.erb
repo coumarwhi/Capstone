@@ -1,0 +1,15 @@
+<h1>The Game has begun!</h1>
+
+
+<%=form_for @game do %>
+  <% if @game.dragon_health <= 0 %>
+    <%="Game Over"%>
+  <%else %>
+    <%="The dragon's health is #{@game.dragon_health}."%>
+  <%end %>
+<%end%>
+
+<%= link_to "Attack", attack_path(@game.id), :class => "btn btn-primary", method: :get %>
+
+
+

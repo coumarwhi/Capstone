@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'players/new'
+
+  get 'players/create'
+
+  post 'games/create'
+
+  get 'games/:id', to: 'games#show', as: 'game'
+
+  get 'games/:id/attack', to: 'games#attack', as: 'attack'
+
   get 'welcome/index'
 
   get 'welcome/about'
